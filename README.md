@@ -5,4 +5,4 @@ Made using
 - redux
 
 ## Link to the website
-[@Click Me](https://prajwalRiddhsoft.github.io/kanban) To Visit the website.
+[@Click Me](https://prajwalRiddhsoft.github.io/todo-kanban) To Visit the website.

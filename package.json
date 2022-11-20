@@ -1,6 +1,6 @@
 {
   "name": "redux-practice",
-  "homepage":"https://prajwalRiddhsoft.github.io/kanban",
+  "homepage":"https://prajwalRiddhsoft.github.io/todo-kanban",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
