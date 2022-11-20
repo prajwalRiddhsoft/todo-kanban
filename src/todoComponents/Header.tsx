@@ -1,3 +1,5 @@
+import { useDispatch, useSelector} from "react-redux";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -11,12 +13,31 @@ const HeaderContainer = styled.div`
     gap: 50px;
     justify-content: center;
 `;
+const Title = styled.div`
+    font-size: 2rem;
+    color: ${(props:any) => props.selected ? "white": "rgba(200,200,200,0.3)" };
+    text-transform: capitalize;
+    cursor: ${(props:any) => props.selected ? "auto": "pointer" };
+    &:hover{
+        color: ${(props:any) => props.selected ? "white": "teal" };
+    }
+`
+
 //Styled Components
 
 const Header = () => {
+    const dispatch = useDispatch();
+    const title = useSelector((state: any) => state.title);
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate(title.next.path);
+        dispatch({type: 'title/change'});
+    }
+
     return(
         <HeaderContainer>
-            <h1>Todo Application Using React beautiful D&D</h1>
+            <Title selected={true}>{title.current.title}</Title>
+            <Title onClick={handleNavigate} selected={false}>{title.next.title}</Title>
         </HeaderContainer>
     );
 }

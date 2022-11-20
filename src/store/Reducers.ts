@@ -1,7 +1,9 @@
-import { TodoListReducer } from "./Slices";
+import { TodoListReducer, KanbanReducer, TitleReducer } from "./Slices";
 
 const Reducers = {
-    todoList: TodoListReducer
+    title: TitleReducer,
+    todoList: TodoListReducer,
+    kanbanList: KanbanReducer
 }
 
 export default Reducers;

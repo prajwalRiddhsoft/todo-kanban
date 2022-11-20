@@ -17,10 +17,13 @@ const Container = styled.div`
 
 const TodoSection = () => {
     return(
-        <Container>
-            <AddTodo />
-            <TodoList />
-        </Container>
+        <>
+            <Container>
+                <AddTodo />
+                <TodoList />
+            </Container>
+        </>
+        
     );
 }
 
