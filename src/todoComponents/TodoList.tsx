@@ -18,6 +18,7 @@ const TodoContainer = styled.li`
     padding: 10px;
     gap: 20px;
     border: 1px solid rgba(100,100,100, 0.5);
+    border-radius: 3px;
 `;
 const RemoveBtn = styled.button`
     padding: 10px;

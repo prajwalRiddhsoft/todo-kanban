@@ -15,6 +15,8 @@ const CustBtn = styled.button`
     font-size: 1.3rem;
     transition: 200ms;
     cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     &:hover{
         border: 2px solid #9844f2;
         color: #9844f2;
@@ -29,6 +31,8 @@ const CustInput = styled.input`
     border: 2px solid rgb(88,88,88);
     font-size: 1.7rem;
     padding: 10px 1rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     &:focus{
         outline: none;
         border: 2px solid #9844f2;
