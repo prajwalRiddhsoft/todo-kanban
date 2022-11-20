@@ -41,17 +41,6 @@ const AddTodo = () => {
     const dispatch = useDispatch();
     const todoList: stateType = useSelector((state:{ todoList: stateType}) => state.todoList);
 
-    useEffect(() => {
-        dispatch({type: 'kanban/add', payload: {
-            element: {
-                id: "1",
-                Task: "Create PR for the Task",
-                Due_Date: "25-May-2021",
-            },
-            column: "todoList"
-        }});
-    }, []);
-
     const calculateId = () => {
         if(todoList.length === 0) return '1a';
 

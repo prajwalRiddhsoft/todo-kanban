@@ -1,5 +1,6 @@
-import { useDispatch, useSelector} from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -29,6 +30,12 @@ const Header = () => {
     const dispatch = useDispatch();
     const title = useSelector((state: any) => state.title);
     const navigate = useNavigate();
+    const location = useLocation();
+    useEffect(() => {
+        if(location.pathname !== title.current.path){
+            dispatch({type: 'title/change'})
+        }
+    }, []);
     const handleNavigate = () => {
         navigate(title.next.path);
         dispatch({type: 'title/change'});

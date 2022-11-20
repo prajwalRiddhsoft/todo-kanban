@@ -137,17 +137,17 @@ const KanbanReducer = (state = kanbanDataSet, action: {type: string, payload: ka
             if("element" in action.payload){
                 return addRemoveElementKanban(state, action.payload, AddORRemove.ADD);
             }
-            return state;
+            break;
         case 'kanban/remove':
             if("element" in action.payload){
                 return addRemoveElementKanban(state, action.payload, AddORRemove.REMOVE)
             }
-            return state;
+            break;
         case 'kanban/order':
             if("newState" in action.payload){
                 return action.payload.newState;
             }
-            return state;
+            break;
         default:
             return state;
     }
