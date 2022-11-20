@@ -39,6 +39,9 @@ const AddKanbanModal = ({open, setOpen}: {open: boolean, setOpen: (value:any) =>
             }
             dispatch({ type: 'kanban/add', payload: { element: newElement, column: column}})
         }
+        handleClose();
+        setTodoTitle("");
+        setColumn(allColumns[0]);
     }
 
 
